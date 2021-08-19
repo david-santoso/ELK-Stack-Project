@@ -1,0 +1,37 @@
+---
+  - name: Config Web VM with Docker
+    hosts: webservers
+    become: true
+    tasks:
+
+    - name: docker.io
+      apt:
+        update_cache: yes
+        # update_cache: yes is needed to download and install docker.io. 
+        # Without it, Ansible may report that the docker.io pacakge is not available
+        name: docker.io
+        state: present
+
+    - name: python3-pip
+      apt:
+        name: python3-pip
+        state: present
+
+    - name: Install Python Docker module
+      pip:
+        name: docker
+        state: present
+
+    - name: Download and launch a docker web container
+      docker_container:
+        name: dvwa
+        image: cyberxsecurity/dvwa
+        state: started
+        restart_policy: always
+        container_default_behavior: compatibility
+        published_ports: 80:80
+
+    - name: Enable docker service
+      systemd:
+        name: docker
+        enabled: yes
