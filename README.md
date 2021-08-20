@@ -9,7 +9,9 @@ These files have been tested and used to generate a live ELK deployment on Azure
   - [Playbook File: DVMA](https://github.com/david-santoso/ELK-Stack-Project/blob/main/Ansible/install-dvma.yml)
   - [Playbook File: ELK](https://github.com/david-santoso/ELK-Stack-Project/blob/main/Ansible/install-elk.yml)
   - [Playbook File: Filebeat](https://github.com/david-santoso/ELK-Stack-Project/blob/main/Ansible/filebeat-playbook.yml)
+  - [Config File: Filebeat]
   - [Playbook File: Metricbeat](https://github.com/david-santoso/ELK-Stack-Project/blob/main/Ansible/metricbeat-playbook.yml)
+  - [Config File: Metricbeat]
 
 This document contains the following details:
 - Description of the Topology
@@ -26,36 +28,34 @@ The main purpose of this network is to expose a load-balanced and monitored inst
 
 Load balancing ensures that the application will be highly available, in addition to restricting access to the network.
 
-Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the file system and system uptime.
+Integrating an ELK server allows users to easily monitor the vulnerable VMs for suspicious changes to the file system and system metrics such as CPU usage and uptime.
 
 The configuration details of each machine may be found below.
 
-|      Name     | Function      | IP Address     | Operating System |
+|      Name     |    Function   |   IP Address   | Operating System |
 |:-------------:|---------------|----------------|------------------|
-| Jump Box      | Gateway       | 10.0.0.5       | Linux            |
-| Web-1         | Web Server    | 10.0.0.7       | Linux            |
-| Web-2         | Web Server    | 10.0.0.6       | Linux            |
-| Load Balancer | Load Balancer | 168.62.188.206 | Azure            |
-| ELK           | ELK Server    | 10.2.0.4       | Linux            |
+| Jump Box      | Gateway       |    10.0.0.5    |      Linux       |
+| Web-1 VM      | Web Server    |    10.0.0.7    |      Linux       |
+| Web-2 VM      | Web Server    |    10.0.0.6    |      Linux       |
+| ELK VM        | ELK Server    |    10.2.0.4    |      Linux       |
 
 ### Access Policies
 
 The machines on the internal network are not exposed to the public Internet. 
 
-Only the Jump Box machine can accept connections from the Internet. Access to this machine is only allowed from the following IP address:
-- 45.132.115.200
+Only the Jump Box machine can accept SSH connections from the Internet. Access to this machine is only allowed from my Personal Public IP address (Personal PIP).
 
-Machines within the network can only be accessed by Jump Box machine (10.0.0.5).
+Virtual Machines within the network (Web-1, Web-2, and ELK VM) can only be accessed via SSH by the ansible docker container running on the Jump Box machine (10.0.0.5). The DVMA and Kibana can only be accessed from my Personal PIP through HTTP port 80 and 5601, respectively.
 
 A summary of the access policies in place can be found in the table below.
 
-| Name          | Publicly Accessible | Allowed IP Addresses                         |
-|---------------|---------------------|----------------------------------------------|
-| Jump Box      | Yes                 | 45.132.115.200                               |
-| Web-1         | No                  | 10.0.0.5                                     |
-| Web-2         | No                  | 10.0.0.5                                     |
-| Load Balancer | Yes                 | 43.132.115.200                               |
-| ELK           | Yes                 | 45.132.115.200, 10.0.0.5, 10.0.0.7, 10.0.0.6 |
+| Name          | Publicly Accessible | Allowed IP Addresses                        |
+|---------------|---------------------|---------------------------------------------|
+| Jump Box      | Yes                 | Personal PIP (p22)                          |
+| Load Balancer | Yes                 | Personal PIP (p80)                          |
+| Web-1 VM      | No                  | Virtual Network (p22, p80)                  |
+| Web-2 VM      | No                  | Virtual Network (p22, p80)                  |
+| ELK VM        | Yes                 | Personal PIP (p5601), Virtual Network (p22) |
 
 ### Elk Configuration
 
