@@ -49,24 +49,25 @@ Virtual Machines within the network (Web-1, Web-2, and ELK VM) can only be acces
 
 A summary of the access policies in place can be found in the table below.
 
-| Name          | Publicly Accessible | Allowed IP Addresses                        |
-|---------------|---------------------|---------------------------------------------|
-| Jump Box      | Yes                 | Personal PIP                                |
-| Load Balancer | Yes                 | Personal PIP                                |
-| Web-1 VM      | No                  | 10.0.0.5                                    |
-| Web-2 VM      | No                  | 10.0.0.5                                    |
+| Name          | Publicly Accessible | Allowed IP Addresses                           |
+|---------------|---------------------|------------------------------------------------|
+| Jump Box      | Yes                 | Personal PIP                                   |
+| Load Balancer | Yes                 | Personal PIP                                   |
+| Web-1 VM      | No                  | 10.0.0.5                                       |
+| Web-2 VM      | No                  | 10.0.0.5                                       |
 | ELK VM        | Yes                 | Personal PIP, 10.0.0.5,<br>10.0.0.6, 10.0.0.7  |
 
 
 ### Elk Configuration
 
-Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because...
-- _TODO: What is the main advantage of automating configuration with Ansible?_
+Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because it drastically reduces the potential for human error and make it easy to configure potentially thousands of identical machines all at once. It allows network administrator to clearly build in security protocols from the ground up so if the machine is found to be vulnerable, it's easy to change the code and build in a fix. The  automation also allows every change to machine configuration to be documented, logged, and tracked.
 
-The playbook implements the following tasks:
-- _TODO: In 3-5 bullets, explain the steps of the ELK installation play. E.g., install Docker; download image; etc._
-- ...
-- ...
+The install-elk playbook implements the following tasks:
+- Install docker.io and python3-pip apt packages
+- Install docker pip packages
+- Configure the virtual memory size
+- Download and launch a docker elk container image
+- Starts the container and enable service docker on boot
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
