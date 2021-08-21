@@ -51,11 +51,11 @@ A summary of the access policies in place can be found in the table below.
 
 | Name          | Publicly Accessible | Allowed IP Addresses                        |
 |---------------|---------------------|---------------------------------------------|
-| Jump Box      | Yes                 | Personal PIP (p22)                          |
-| Load Balancer | Yes                 | Personal PIP (p80)                          |
-| Web-1 VM      | No                  | Virtual Network (p22, p80)                  |
-| Web-2 VM      | No                  | Virtual Network (p22, p80)                  |
-| ELK VM        | Yes                 | Personal PIP (p5601), Virtual Network (p22) |
+| Jump Box      | Yes                 | Personal PIP                                |
+| Load Balancer | Yes                 | Personal PIP                                |
+| Web-1 VM      | No                  | Jump Box (10.0.0.5)                         |
+| Web-2 VM      | No                  | Jump Box (10.0.0.5)                         |
+| ELK VM        | Yes                 | Personal PIP, 10.0.0.5, 10.0.0.6, 10.0.0.7  |
 
 ### Elk Configuration
 
