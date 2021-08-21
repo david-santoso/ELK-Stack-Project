@@ -6,12 +6,12 @@ The files in this repository were used to configure the network depicted below.
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the playbook file may be used to install only certain pieces of it, such as Filebeat.
 
-  - [Playbook File: DVMA](Ansible/install-dvma.yml)
-  - [Playbook File: ELK](Ansible/install-elk.yml)
-  - [Playbook File: Filebeat](Ansible/filebeat-playbook.yml)
-  - [Config File: Filebeat](Ansible/filebeat-config.yml)
-  - [Playbook File: Metricbeat](Ansible/metricbeat-playbook.yml)
-  - [Config File: Metricbeat](Ansible/metricbeat-config.yml)
+  - [Playbook File: install-dvma.yml](Ansible/install-dvma.yml)
+  - [Playbook File: install-elk.yml](Ansible/install-elk.yml)
+  - [Playbook File: filebeat-playbook.yml](Ansible/filebeat-playbook.yml)
+  - [Config File: filebeat-config.yml](Ansible/filebeat-config.yml)
+  - [Playbook File: metricbeat-playbook.yml](Ansible/metricbeat-playbook.yml)
+  - [Config File: metricbeat-config.yml](Ansible/metricbeat-config.yml)
 
 This document contains the following details:
 - Description of the Topology
