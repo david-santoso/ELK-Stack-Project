@@ -94,7 +94,7 @@ In order to use the playbook, you will need to have an Ansible control node alre
 
 SSH into the control node and follow the steps below:
 - Copy the `install-elk.yml` file to /etc/ansible directory.
-- Update the Ansible's configuration and inventory file to include the ELK server's user name and private IP address, respectively. Don't forget to specify python3 as shown in the hosts file below:
+- Update the Ansible's configuration and inventory file to include the ELK server's user name and private IP address, respectively. Don't forget to specify python3 in the hosts file as shown below:
 
 ```
 [elk]
