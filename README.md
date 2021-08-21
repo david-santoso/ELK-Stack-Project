@@ -92,6 +92,8 @@ These Beats allow us to collect the following information from each machine:
 ### Using the Playbook
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
 
+#### Installing ELK Server
+
 SSH into the control node and follow the steps below:
 - Copy the `install-elk.yml` file to /etc/ansible directory.
 - Update the Ansible's configuration and inventory file to include the ELK server's user name and private IP address, respectively. Don't forget to specify python3 in the hosts file as shown below:
@@ -103,6 +105,27 @@ SSH into the control node and follow the steps below:
 
 - Run the playbook, and navigate to `http://[ELK-VM Public IP]:5601/app/kibana` to check that the installation worked as expected.
 
+
+#### Installing Filebeat
+
+SSH into the control node and follow the steps below:
+- Copy the `filebeat-playbook.yml` file to /etc/ansible directory.
+- Copy the `filebeat-config.yml` file to  /etc/ansible/files directory.
+- Edit the `filebeat-config.yml` configuration file as specified below:
+```
+- Scroll to line #1106 and replace the IP address with the IP address of your ELK machine, but do not change the port number (9200).
+- Similarly, scroll to line #1806 and replace the IP address with the IP address of your ELK machine, but do not change the port number (5601).
+- Note that the default credentials are elastic:changeme and should not be changed.
+```
+- After editing the configuration file, run the `filebeat-playbook.yml` playbook file as shown below:
+```
+ansible-playbook filebeat-playbook.yml
+```
+
+
+
+
+########################
 
 _TODO: Answer the following questions to fill in the blanks:_
 - _Which file is the playbook? Where do you copy it?_
