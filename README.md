@@ -85,10 +85,10 @@ We have installed the following Beats on these machines:
 These Beats allow us to collect the following information from each machine:
 
 - `Filebeat` monitors the system log files, collects log events and forwards them to either Logstash for more advanced processing or directly into Elasticsearch for indexing.
--- Example: /var/log/*.log
+  Example: /var/log/*.log
 
 - `Metricbeat` monitors the behaviour and usage of system resources, which helps increase the availability and reliability of the system and allows IT teams to quickly respond to any fault if they occour.
--- Example: CPU or memory statistics
+  Example: CPU or memory statistics
 
 
 ### Using the Playbook
