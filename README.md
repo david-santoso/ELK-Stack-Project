@@ -96,9 +96,10 @@ SSH into the control node and follow the steps below:
 - Copy the `install-elk.yml` file to /etc/ansible directory.
 - Update the Ansible's configuration and inventory file to include the ELK server's user name and private IP address, respectively. Don't forget to specify python3 as shown in the hosts file below:
 
+```
 [elk]
-
 10.2.0.4 ansible_python_interpreter=/usr/bin/python3
+```
 
 - Run the playbook, and navigate to `http://[ELK-VM Public IP]:5601/app/kibana` to check that the installation worked as expected.
 
