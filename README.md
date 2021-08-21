@@ -124,9 +124,9 @@ SSH into the control node and follow the steps below:
 ansible-playbook filebeat-playbook.yml
 ```
 - To check if the installation is successful, do the following steps on Kibana page (http://[ELK-VM Public IP]:5601/app/kibana):
-  *- From the welcome page, click **Explore on my Own**.
-- Click **Add Log Data**.
-- Choose **System Logs**.
+- From the welcome page, click **Explore on my Own**.
+    - Click **Add Log Data**.
+    - Choose **System Logs**.
 - Click on the **DEB** tab under **Getting Started**.
 - Scroll down to **Step 5: Module Status** and click **Check Data**.
 - Scroll to the bottom of the page and click **Verify Incoming Data**.
