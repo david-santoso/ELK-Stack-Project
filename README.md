@@ -6,11 +6,11 @@ The files in this repository were used to configure the network depicted below.
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the playbook file may be used to install only certain pieces of it, such as Filebeat.
 
-  - [Playbook File: DVMA](https://github.com/david-santoso/ELK-Stack-Project/blob/main/Ansible/install-dvma.yml)
-  - [Playbook File: ELK](https://github.com/david-santoso/ELK-Stack-Project/blob/main/Ansible/install-elk.yml)
-  - [Playbook File: Filebeat](https://github.com/david-santoso/ELK-Stack-Project/blob/main/Ansible/filebeat-playbook.yml)
+  - [Playbook File: DVMA](Ansible/install-dvma.yml)
+  - [Playbook File: ELK](Ansible/install-elk.yml)
+  - [Playbook File: Filebeat](Ansible/filebeat-playbook.yml)
   - [Config File: Filebeat]
-  - [Playbook File: Metricbeat](https://github.com/david-santoso/ELK-Stack-Project/blob/main/Ansible/metricbeat-playbook.yml)
+  - [Playbook File: Metricbeat](Ansible/metricbeat-playbook.yml)
   - [Config File: Metricbeat]
 
 This document contains the following details:
@@ -71,7 +71,7 @@ The install-elk playbook implements the following tasks:
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
-![TODO: Update the path with the name of your screenshot of docker ps output](Images/docker_ps_output.png)
+![Screenshot of docker ps output](Images/docker_ps_output.png)
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
