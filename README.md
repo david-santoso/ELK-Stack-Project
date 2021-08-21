@@ -53,8 +53,8 @@ A summary of the access policies in place can be found in the table below.
 |---------------|---------------------|---------------------------------------------|
 | Jump Box      | Yes                 | Personal PIP                                |
 | Load Balancer | Yes                 | Personal PIP                                |
-| Web-1 VM      | No                  | Jump Box (10.0.0.5)                         |
-| Web-2 VM      | No                  | Jump Box (10.0.0.5)                         |
+| Web-1 VM      | No                  | 10.0.0.5                                    |
+| Web-2 VM      | No                  | 10.0.0.5                                    |
 | ELK VM        | Yes                 | Personal PIP, 10.0.0.5, 10.0.0.6, 10.0.0.7  |
 
 ### Elk Configuration
