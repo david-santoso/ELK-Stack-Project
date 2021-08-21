@@ -103,7 +103,9 @@ SSH into the control node and follow the steps below:
 10.2.0.4 ansible_python_interpreter=/usr/bin/python3
 ```
 
-- Run the playbook, and navigate to `http://[ELK-VM Public IP]:5601/app/kibana` to check that the installation worked as expected.
+- Run the playbook, and navigate to `http://[ELK-VM Public IP]:5601/app/kibana` to check that the installation worked as expected. If successful, you will see the Kibana's welcome page as shown below:
+
+![Screenshot of Kibana's welcome page](Images/welcome_to_kibana.png)
 
 
 #### Installing Filebeat
@@ -117,7 +119,7 @@ SSH into the control node and follow the steps below:
 - Similarly, scroll to line #1806 and replace the IP address with the IP address of your ELK machine, but do not change the port number (5601).
 - Note that the default credentials are elastic:changeme and should not be changed.
 ```
-- After editing the configuration file, run the `filebeat-playbook.yml` playbook file as shown below:
+- After editing the configuration file, run the `filebeat-playbook.yml` playbook file using the command below:
 ```
 ansible-playbook filebeat-playbook.yml
 ```
