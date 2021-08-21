@@ -127,10 +127,10 @@ ansible-playbook filebeat-playbook.yml
 - From the welcome page, click **Explore on my Own**.
     - Click **Add Log Data**.
     - Choose **System Logs**.
-- Click on the **DEB** tab under **Getting Started**.
-- Scroll down to **Step 5: Module Status** and click **Check Data**.
-- Scroll to the bottom of the page and click **Verify Incoming Data**.
-- If installation was successful, you will see a message *Data successfully received from this module* as shown below:
+    - Click on the **DEB** tab under **Getting Started**.
+    - Scroll down to **Step 5: Module Status** and click **Check Data**.
+    - Scroll to the bottom of the page and click **Verify Incoming Data**.
+    - If installation was successful, you will see a message *Data successfully received from this module* as shown below:
 
 ![Screenshot of Filebeat successful message](Images/filebeat_successful.png)
 
@@ -152,12 +152,12 @@ ansible-playbook metricbeat-playbook.yml
 ```
 
 - To check if the installation is successful, do the following steps on Kibana page (http://[ELK-VM Public IP]:5601/app/kibana):
-- Click **Add Metric Data**.
-- Choose **Docker Metrics**.
-- Click on the **DEB** tab under **Getting Started**.
-- Scroll down to **Step 5: Module Status** and click **Check Data**.
-- Scroll to the bottom of the page and click **Verify Incoming Data**.
-- If installation was successful, you will see a message *Data successfully received from this module* as shown below:
+    - Click **Add Metric Data**.
+    - Choose **Docker Metrics**.
+    - Click on the **DEB** tab under **Getting Started**.
+    - Scroll down to **Step 5: Module Status** and click **Check Data**.
+    - Scroll to the bottom of the page and click **Verify Incoming Data**.
+    - If installation was successful, you will see a message *Data successfully received from this module* as shown below:
 
 ![Screenshot of Metricbeat successful message](Images/metricbeat_successful.png)
 
