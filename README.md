@@ -115,15 +115,15 @@ SSH into the control node and follow the steps below:
 - Copy the `filebeat-config.yml` file to  /etc/ansible/files directory.
 - Edit the `filebeat-config.yml` configuration file as specified below:
 ```
-- Scroll to line #1106 and replace the IP address with the IP address of your ELK machine, but do not change the port number (9200).
-- Similarly, scroll to line #1806 and replace the IP address with the IP address of your ELK machine, but do not change the port number (5601).
+- Scroll to line #1105 and replace the IP address with the IP address of your ELK machine, but do not change the default port number (9200).
+- Similarly, scroll to line #1805 and replace the IP address with the IP address of your ELK machine, but do not change the default port number (5601).
 - Note that the default credentials are elastic:changeme and should not be changed.
 ```
 - After editing the configuration file, run the `filebeat-playbook.yml` playbook file using the command below:
 ```
 ansible-playbook filebeat-playbook.yml
 ```
-- To check if the installation is successful, do the following steps on Kibana page `http://[ELK-VM Public IP]:5601/app/kibana`:
+- To check if the installation is successful, do the following steps on Kibana page (http://[ELK-VM Public IP]:5601/app/kibana):
 - From the welcome page, click 'Explore on my Own'.
 - Click 'Add Log Data'.
 - Choose 'System Logs'.
@@ -137,21 +137,30 @@ ansible-playbook filebeat-playbook.yml
 
 #### Installing Metricbeat
 
-Repeat the above steps for installing filebeat. 
-
 SSH into the control node and follow the steps below:
-- Copy the `filebeat-playbook.yml` file to /etc/ansible directory.
-- Copy the `filebeat-config.yml` file to  /etc/ansible/files directory.
-- Edit the `filebeat-config.yml` configuration file as specified below:
+- Copy the `metricbeat-playbook.yml` file to /etc/ansible directory.
+- Copy the `metricbeat-config.yml` file to  /etc/ansible/files directory.
+- Edit the `metricbeat-config.yml` configuration file as specified below:
 ```
-- Scroll to line #1106 and replace the IP address with the IP address of your ELK machine, but do not change the port number (9200).
-- Similarly, scroll to line #1806 and replace the IP address with the IP address of your ELK machine, but do not change the port number (5601).
+- Scroll to line #62 and replace the IP address with the IP address of your ELK machine, but do not change the default port number (5601).
+- Similarly, scroll to line #96 and replace the IP address with the IP address of your ELK machine, but do not change the default port number (9200).
 - Note that the default credentials are elastic:changeme and should not be changed.
 ```
-- After editing the configuration file, run the `filebeat-playbook.yml` playbook file using the command below:
+- After editing the configuration file, run the `metricbeat-playbook.yml` playbook file using the command below:
 ```
-ansible-playbook filebeat-playbook.yml
+ansible-playbook metricbeat-playbook.yml
 ```
+
+- To check if the installation is successful, do the following steps on Kibana page (http://[ELK-VM Public IP]:5601/app/kibana):
+- From the welcome page, click 'Explore on my Own'.
+- Click 'Add Log Data'.
+- Choose 'System Logs'.
+- Click on the 'DEB' tab under 'Getting Started'.
+- Scroll down to 'Step 5: Module Status and click Check Data'.
+- Scroll to the bottom of the page and click 'Verify Incoming Data'.
+- If installation was successful, you will see a message 'Data successfully received from this module' as shown below:
+
+![Screenshot of Metricbeat successful message](Images/metricbeat_successful.png)
 
 
 
