@@ -84,20 +84,23 @@ We have installed the following Beats on these machines:
 
 These Beats allow us to collect the following information from each machine:
 
-- `Filebeat` monitors the system log files, collects log events and forwards them to either Logstash for more advanced processing or directly into Elasticsearch for indexing.
-  Example: /var/log/*.log
+- `Filebeat` monitors the system log files, collects log events and forwards them to either Logstash for more advanced processing or directly into Elasticsearch for indexing. Example: /var/log/*.log
 
-- `Metricbeat` monitors the behaviour and usage of system resources, which helps increase the availability and reliability of the system and allows IT teams to quickly respond to any fault if they occour.
-  Example: CPU or memory statistics
+- `Metricbeat` monitors the behaviour and usage of system resources, which helps increase the availability and reliability of the system and allows IT teams to quickly respond to any fault if they occour. Example: CPU or memory statistics.
 
 
 ### Using the Playbook
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
 
 SSH into the control node and follow the steps below:
-- Copy the _____ file to _____.
-- Update the _____ file to include...
-- Run the playbook, and navigate to ____ to check that the installation worked as expected.
+- Copy the install-elk.yml file to /etc/ansible directory.
+- Update the Ansible's configuration and inventory file to include the ELK server's user name and private IP address, respectively. Don't forget to specify python3 with ansible_python_interpreter=/usr/bin/python3 as shown in the hosts file below:
+
+[elk]
+10.2.0.4 ansible_python_interpreter=/usr/bin/python3
+
+- Run the playbook, and navigate to `http://[ELK-VM Public IP]:5601/app/kibana` to check that the installation worked as expected.
+
 
 _TODO: Answer the following questions to fill in the blanks:_
 - _Which file is the playbook? Where do you copy it?_
