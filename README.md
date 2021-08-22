@@ -129,7 +129,9 @@ SSH into the control node and follow the steps below:
     - Scroll to the bottom of the page and click **Verify Incoming Data**.
     - If installation was successful, you will see a message *Data successfully received from this module* as shown below:
 
-![Screenshot of Filebeat successful message](Images/filebeat_successful.png)
+<p align="center">
+  <img width="615" height="294" src="https://github.com/david-santoso/ELK-Stack-Project/blob/main/Images/filebeat_successful.png">
+</p>
 
 
 
@@ -151,8 +153,6 @@ SSH into the control node and follow the steps below:
     - Scroll down to **Step 5: Module Status** and click **Check Data**.
     - Scroll to the bottom of the page and click **Verify Incoming Data**.
     - If installation was successful, you will see a message *Data successfully received from this module* as shown below:
-
-![Screenshot of Metricbeat successful message](Images/metricbeat_successful.png)
 
 <p align="center">
   <img width="617" height="293" src="https://github.com/david-santoso/ELK-Stack-Project/blob/main/Images/metricbeat_successful.png">
