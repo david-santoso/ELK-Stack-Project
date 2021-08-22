@@ -113,7 +113,7 @@ SSH into the control node and follow the steps below:
 SSH into the control node and follow the steps below:
 - Copy the `filebeat-playbook.yml` file to /etc/ansible directory.
 - Copy the `filebeat-config.yml` file to  /etc/ansible/files directory.
-- Edit the `filebeat-config.yml` configuration file as specified below:
+- Edit the filebeat configuration file as specified below:
     - Scroll to line #1105 and replace the IP address with the IP address of your ELK machine, but do not change the default port number (9200).
     - Similarly, scroll to line #1805 and replace the IP address with the IP address of your ELK machine, but do not change the default port number (5601).
     - Note that the default credentials are elastic:changeme and should not be changed.
@@ -137,7 +137,7 @@ SSH into the control node and follow the steps below:
 SSH into the control node and follow the steps below:
 - Copy the `metricbeat-playbook.yml` file to /etc/ansible directory.
 - Copy the `metricbeat-config.yml` file to  /etc/ansible/files directory.
-- Edit the `metricbeat-config.yml` configuration file as specified below:
+- Edit the metricbeat configuration file as specified below:
     - Scroll to line #62 and replace the IP address with the IP address of your ELK machine, but do not change the default port number (5601).
     - Similarly, scroll to line #96 and replace the IP address with the IP address of your ELK machine, but do not change the default port number (9200).
     - Note that the default credentials are elastic:changeme and should not be changed.
