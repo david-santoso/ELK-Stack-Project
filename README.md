@@ -132,6 +132,7 @@ SSH into the control node and follow the steps below:
 ![Screenshot of Filebeat successful message](Images/filebeat_successful.png)
 
 
+
 #### Installing Metricbeat
 
 SSH into the control node and follow the steps below:
@@ -153,6 +154,9 @@ SSH into the control node and follow the steps below:
 
 ![Screenshot of Metricbeat successful message](Images/metricbeat_successful.png)
 
+<p align="center">
+  <img width="617" height="293" src="https://github.com/david-santoso/ELK-Stack-Project/blob/main/Images/metricbeat_successful.png">
+</p>
 
 
 ########################
