@@ -129,7 +129,7 @@ SSH into the control node and follow the steps below:
     - Click on the **DEB** tab under **Getting Started**.
     - Scroll down to **Step 5: Module Status** and click **Check Data**.
     - Scroll to the bottom of the page and click **Verify Incoming Data**.
-    - If installation was successful, you will see a message *Data successfully received from this module* as shown below. Click **System logs dashboard** to open Filebeat System dashboard.
+    - If installation was successful, you will see a message *Data successfully received from this module* as shown below. Click **System logs dashboard** to open [Filebeat System] Syslog dashboard.
 	
 
 ![Screenshot of Filebeat successful message](Images/filebeat_successful.png)
@@ -155,7 +155,7 @@ SSH into the control node and follow the steps below:
     - Click on the **DEB** tab under **Getting Started**.
     - Scroll down to **Step 5: Module Status** and click **Check Data**.
     - Scroll to the bottom of the page and click **Verify Incoming Data**.
-    - If installation was successful, you will see a message *Data successfully received from this module* as shown below. Click **System logs dashboard** to open Metric System dashboard.
+    - If installation was successful, you will see a message *Data successfully received from this module* as shown below. Click **System logs dashboard** to open [Metricbeat Docker] Overview Dashboard.
 
 ![Screenshot of Metricbeat successful message](Images/metricbeat_successful.png)
 ![Screenshot of Metricbeat dashboard](Images/metricbeat_dashboard.png)
