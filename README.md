@@ -132,6 +132,7 @@ SSH into the control node and follow the steps below:
     - If installation was successful, you will see a message *Data successfully received from this module* as shown below:
 
 ![Screenshot of Filebeat successful message](Images/filebeat_successful.png)
+![Screenshot of Filebeat dashboard](Images/filebeat_dashboard.png)
 
 
 #### Installing Metricbeat
