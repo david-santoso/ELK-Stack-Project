@@ -185,5 +185,5 @@ SSH into the Jump Box machine and attach to the ansible docker. Then follow the 
     - Scroll down to **Status** at the bottom of the page and click **Check data**.
     - If installation was successful, you will see a message *Data successfully received* as shown below. 
 
-![Screenshot of Auditbeat successful message](Images/metricbeat_successful.png)
+![Screenshot of Auditbeat successful message](Images/auditbeat_successful.png)
 
