@@ -1,0 +1,33 @@
+---
+- name: Install audit beat
+  hosts: webservers
+  become: true
+  tasks:
+
+    # Use command module
+  - name: Download metricbeat
+    command: curl -L -O https://artifacts.elastic.co/downloads/beats/auditbeat/auditbeat-7.6.1-amd64.deb
+
+    # Use command module
+  - name: install metricbeat
+    command: dpkg -i auditbeat-7.6.1-amd64.deb
+
+    # Use copy module
+  - name: drop in auditbeat config
+    copy:
+      src: /etc/ansible/files/auditbeat-config.yml
+      dest: /etc/auditbeat/auditbeat.yml
+
+    # Use command module
+  - name: setup audit beat
+    command: auditbeat setup
+
+    # Use command module
+  - name: start audit beat
+    command: service auditbeat start
+
+    # Use systemd module
+  - name: enable service auditeat on boot
+    systemd:
+      name: auditbeat
+      enabled: yes
