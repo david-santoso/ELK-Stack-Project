@@ -12,6 +12,8 @@ These files have been tested and used to generate a live ELK deployment on Azure
 - [Config File: filebeat-config.yml](Ansible/filebeat-config.yml)
 - [Playbook File: metricbeat-playbook.yml](Ansible/metricbeat-playbook.yml)
 - [Config File: metricbeat-config.yml](Ansible/metricbeat-config.yml)
+- [Playbook File: auditbeat-playbook.yml](Ansible/auditbeat-playbook.yml)
+- [Config File: auditbeat-config.yml](Ansible/auditbeat-config.yml)
 
 This document contains the following details:
 - Description of the Topology
@@ -89,6 +91,9 @@ These Beats allow us to collect the following information from each machine:
 
 - `Metricbeat` monitors the behaviour and usage of system resources, which helps increase the availability and reliability of the system and allows IT teams to quickly respond to any fault if they occour. Below is an example of Metricbeat showing an increase of CPU, memory and Network bandwidth usage during a wget-DoS attack.
 ![Screenshot of Metricbeat dashboard](Images/metricbeat_wget-DoS.png)
+
+- `Auditbeat` collects auditing data from the hosts. These include processes, users, logins sockets information, file accesses, and more. Below is an example of Auditbeat overview.
+![Screenshot of Auditbeat dashboard](Images/auditbeat_overview.png)
 
 
 ### Using the Playbook
